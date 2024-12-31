@@ -1,2 +1,0 @@
-# etchasketch
-etchasketch

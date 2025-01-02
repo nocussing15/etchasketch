@@ -22,6 +22,17 @@
    flex-basis:100%;
    flex:1;
    height:100px;
-   width:100px;
+   width:50px;
 
+}
+
+.column:hover{
+    background-color: lightblue;
+    color:black;
+    cursor:pointer;
+}
+
+
+.column.drawing{
+    background-color:black;
 }

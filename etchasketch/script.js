@@ -11,6 +11,8 @@ for (let i = 0 ; i<256; i++){
     container.appendChild(newSquare); 
 }
 */
+
+//create 16x16 grid
 for (let i = 0; i <16; i++) {
     let newRow = document.createElement("div"); 
     newRow.id='row' + i;
@@ -27,3 +29,29 @@ for (let i = 0; i <16; i++) {
     }
    
 }
+
+
+//function and event listener for drawing 
+let isDrawing = false;
+
+const draw = (e) => {
+    const target=e.target;
+    if(target.classList.contains('column')) {
+        target.classList.add('drawing');
+    }
+}
+
+
+container.addEventListener('mouseover',(e)=>{
+    draw(e); 
+})
+
+
+//function and event listener to clear the board
+const clearButton = document.getElementById("clear"); 
+clearButton.addEventListener("click",function(){
+    let drawing = document.querySelectorAll('.drawing');
+    for (let i=0; i < drawing.length; i++) {
+        drawing[i].classList.remove("drawing");
+    }
+})
